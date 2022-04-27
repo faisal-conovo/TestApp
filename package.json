@@ -1,0 +1,65 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "AceLancing Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "build": "react-scripts build"
+  },
+  "author": "TechroVista",
+  "license": "ISC",
+  "dependencies": {
+    "aws-s3": "^2.0.5",
+    "aws-sdk": "^2.1053.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto-random-string": "^2.0.0",
+    "dayjs": "^1.10.7",
+    "dotenv": "^8.6.0",
+    "express-fileupload": "^1.2.1",
+    "fastify": "^3.24.0",
+    "fastify-compress": "^3.6.0",
+    "fastify-cors": "^6.0.1",
+    "fastify-express": "^0.3.2",
+    "fastify-multer": "^2.0.2",
+    "fastify-multipart": "^4.0.6",
+    "fastify-static": "^4.2.3",
+    "firebase": "^9.6.4",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mailgun-js": "^0.22.0",
+    "mongoose": "^5.12.7",
+    "mongoose-sequence": "^5.3.1",
+    "multer": "^1.4.2",
+    "node-cron": "^3.0.0",
+    "nodemailer": "^6.6.2",
+    "nodemon": "^2.0.15",
+    "react-scripts": "^5.0.0",
+    "server.js": "^1.0.0",
+    "stripe": "^8.179.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "/**/*.{js,json,md}": [
+      "prettier --write",
+      "eslint --cache --fix --max-warnings 0"
+    ]
+  }
+}
