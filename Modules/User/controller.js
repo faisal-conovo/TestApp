@@ -268,7 +268,7 @@ exports.otpValidation = async (request, responce) => {
   } catch (error) {
     return responce.status(500).send({ message: error, status: false });
   }
-};
+};   
 // Reset Password
 exports.resetForgotPassword = async (request, responce) => {
   try {
