@@ -276,7 +276,7 @@ exports.resetForgotPassword = async (request, responce) => {
     const hashedPassword = await bcrypt.hash(password, 12);
     const updatePassword = await UserModal.updateOne(
       { _id: user },
-      { $set: { password: hashedPassword } }
+      { $set: { password: hashedPassword } } 
     );
     if (updatePassword) {
       return responce
